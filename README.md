@@ -6,5 +6,7 @@ Bu script ile Oracle Java 8 JDK pardus depolarından indirilecek, gerekli bağla
 
 # Kurulum
 ```wget -nc O- https://raw.githubusercontent.com/yahyayildirim/java_ayarlama/main/java_ayarlama.sh```
+
 ```chmod +x java_ayarlama.sh```
+
 ```./java_ayarlama.sh```
