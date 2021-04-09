@@ -24,7 +24,7 @@ if [ $? == "0" ]; then
 fi
 
 echo "Eğer yüklü değilse, Oracle Java 8 indirilecek ve kurulacak..."
-sudo apt install -f --reinstall oracle-java8-jdk 
+apt install -f --reinstall oracle-java8-jdk 
 
 
 echo -e "\nJava 8 Web Start için uygulamalar menüsünde kısayol oluşturuluyor..."
