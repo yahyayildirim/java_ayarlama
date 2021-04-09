@@ -56,3 +56,4 @@ echo -e "1) Network Setting'e tıkla, en altta Direct connection aktif et, sonra
 echo -e "2) Settings'e tıkla, en üstteki tiki kaldır. Sonra Delete Files'e tıkla hepsini işaretle ve OK ve tekrar Ok ile kapat.\n";sleep 2
 echo "3) Mavi renkli olan See the Security Tab'a tıkla, eğer https://kesenek.sgk.gov.tr/ ekli değil ise,"
 echo "   Edit Site List'e tıkla Add tıkla ve https://kesenek.sgk.gov.tr/ ekle ve sırasıyla OK -- Apply -- OK ile ekranı kapat.\n"
+echo "Artık sorunsuz bir şekilde kesenek ve bildirge işlemlerinizi yapabilirsiniz."
