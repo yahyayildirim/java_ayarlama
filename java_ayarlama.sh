@@ -24,7 +24,12 @@ if [ $? == "0" ]; then
 fi
 
 echo "Eğer yüklü değilse, Oracle Java 8 indirilecek ve kurulacak..."
-apt install -f --reinstall oracle-java8-jdk 
+dpkg -l profelis-diyanet > /dev/null 2>&1
+if [ $? == "0" ]; then
+    apt install --reinstall profelis-oracle-java
+else
+	apt install --reinstall oracle-java8-jdk 
+fi
 
 
 echo -e "\nJava 8 Web Start için uygulamalar menüsünde kısayol oluşturuluyor..."
@@ -57,9 +62,9 @@ Categories=Application
 EOF
 chmod +xr /usr/share/applications/javawsviewer.desktop
 
-echo -e "\nDeğerli Hocam; Kurulum tamamlandı, şimdi Uygulamalar menüsünden Java Ayarlarını açın ve aşağıdaki değişiklikleri yapın.\n"; sleep 2
-echo -e "1) Network Setting'e tıkla, en altta Direct connection aktif et, sonra OK ile kapat.\n"; sleep 2
-echo -e "2) Settings'e tıkla, en üstteki tiki kaldır. Sonra Delete Files'e tıkla hepsini işaretle ve OK ve tekrar Ok ile kapat.\n";sleep 2
+echo -e "\nDeğerli Hocam; Kurulum tamamlandı, şimdi Uygulamalar menüsünden Java Ayarlarını açın ve aşağıdaki değişiklikleri yapın.\n"
+echo -e "1) Network Setting'e tıkla, en altta Direct connection aktif et, sonra OK ile kapat.\n"
+echo -e "2) Settings'e tıkla, en üstteki tiki kaldır. Sonra Delete Files'e tıkla hepsini işaretle ve OK ve tekrar Ok ile kapat.\n"
 echo "3) Mavi renkli olan See the Security Tab'a tıkla, eğer https://kesenek.sgk.gov.tr/ ekli değil ise,"
 echo -e "   Edit Site List'e tıkla Add tıkla ve https://kesenek.sgk.gov.tr/ ekle ve sırasıyla OK -- Apply -- OK ile ekranı kapat.\n"
 echo -e "Artık sorunsuz bir şekilde kesenek ve bildirge işlemlerinizi yapabilirsiniz.\n"
